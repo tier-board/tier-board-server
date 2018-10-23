@@ -2,8 +2,8 @@
 
 import express from 'express';
 const router = express.Router();
-import dateFormat from 'dateformat';
-const now = new Date();
+// import dateFormat from 'dateformat';
+// const now = new Date();
 
 import modelFinder from '../middleware/models.js';
 router.param('model', modelFinder);
@@ -24,7 +24,8 @@ router.get('/', (req,res) => {
 });
 
 router.get('/api/v1/:model', (req,res,next) => {
-  req.model.find({date: dateFormat(now,'mmm dd, yyyy')})
+  req.model.find({})
+  //req.model.find({date: dateFormat(now,'mmm dd, yyyy')})
     .then( data => sendJSON(res,data) )
     .catch( next );
 });
