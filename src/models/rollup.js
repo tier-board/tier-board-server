@@ -1,9 +1,9 @@
 'use strict';
 
-import mongoose from 'mongoose';
+import mongoose, {Schema} from 'mongoose';
 
 const RollupSchema = mongoose.Schema({
-  //RollupID: { type: Schema.Types.ObjectID, ref:'Rollup' },
+  _id: { type:Schema.Types.ObjectId },
   tVarience: { type: String },
   tCompleted: { type: String },
   endOfDay: { type: String },
