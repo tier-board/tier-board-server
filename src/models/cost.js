@@ -1,9 +1,9 @@
 'use strict';
 
-import mongoose from 'mongoose';
+import mongoose, {Schema} from 'mongoose';
 
 const CostSchema = mongoose.Schema({
-//  costID: { type:Schema.Types.ObjectID, ref:'Cost' },
+  _id: { type:Schema.Types.ObjectId },
   station: { type: String },
   task: { type: String },
   date: { type: String },

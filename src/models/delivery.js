@@ -1,9 +1,9 @@
 'use strict';
 
-import mongoose from 'mongoose';
+import mongoose, {Schema} from 'mongoose';
 
 const DeliverySchema = mongoose.Schema({
-  //deliveryID: { type: Schema.Types.ObjectID, ref:'Delivery' },
+  _id: { type:Schema.Types.ObjectId },
   station: { type: String },
   issue: { type: String },
   countermeasure: { type: String },
